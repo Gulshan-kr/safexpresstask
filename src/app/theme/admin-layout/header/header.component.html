@@ -1,0 +1,22 @@
+<mat-toolbar class="matero-toolbar">
+  <button mat-button class="matero-hamburger" (click)="toggleSidenav.emit()" *ngIf="showToggle">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <app-branding *ngIf="showBranding"></app-branding>
+
+  <button mat-icon-button>
+    <mat-icon>search</mat-icon>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="SEARCH GROUP ID, SFX, CODE ETC" value="">
+      </mat-form-field>
+  </button>
+  <span fxFlex></span>
+
+
+
+  <app-notification fxHide.lt-sm></app-notification>
+
+  <app-user></app-user>
+
+</mat-toolbar>
